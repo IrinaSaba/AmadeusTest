@@ -1,6 +1,6 @@
 import { createReducer } from '@reduxjs/toolkit';
 import { combineReducers } from 'redux';
-import { changeFilter, changeFilterTarget  } from './cards-actions';
+import { changeFilter } from './cards-actions';
 import { getCards } from './cards-operations';
 
 const itemsReducer = createReducer([], {
@@ -9,8 +9,8 @@ const itemsReducer = createReducer([], {
 
 const filterReducer = createReducer('', {
   [changeFilter]: (_, { payload }) => payload,
-  [changeFilterTarget]: (_, { payload }) => payload,
 });
+
 const setError = (_, { payload }) => payload;
 const resetError = () => null;
 

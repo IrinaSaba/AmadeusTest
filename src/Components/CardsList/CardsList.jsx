@@ -12,13 +12,14 @@ const filterCardsTarget = (items, filter) => {
   );
 };
 
-const Cards = () => {
+const Cards = ({option}) => {
   const dispatch = useDispatch();
   const items = useSelector(state => state.cards.items);
   const filter = useSelector(state => state.cards.filter);
   const newItems = filterCards(items, filter);
+  const newItemsTarget = filterCardsTarget(items, filter);
 
-   return newItems.length ? (
+   return option === 'name' ? (
     <ul>
        {newItems.map(({ name, id, target, bodyPart, equipment, gifUrl }) => (
             <li key={id}>
@@ -26,11 +27,22 @@ const Cards = () => {
               <p>Target: {target}</p>
               <p>Body part: {bodyPart}</p>
               <p>Equipment: {equipment}</p>
-              <img src={gifUrl} alt={name}/>
+              
             </li>
        ))}
     </ul> ) 
-    : null
+    : 
+    <ul>
+    {newItemsTarget.map(({ name, id, target, bodyPart, equipment, gifUrl }) => (
+         <li key={id}>
+           <p> Name: {name}</p>
+           <p>Target: {target}</p>
+           <p>Body part: {bodyPart}</p>
+           <p>Equipment: {equipment}</p>
+         
+         </li>
+    ))}
+ </ul>
        }
  export default Cards;
  
