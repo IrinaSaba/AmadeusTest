@@ -20,7 +20,7 @@ const Cards = () => {
               <p>Target: {target}</p>
               <p>Body part: {bodyPart}</p>
               <p>Equipment: {equipment}</p>
-              <p>Gif URL: {gifUrl}</p>
+              <img src={gifUrl} alt={name}/>
             </li>
        ))}
     </ul>

@@ -7,13 +7,17 @@ const Filter = ()  => {
   
    return (
      <>
-     <label htmlFor="" name="filter"> Find contact by name : </label>
+      <label htmlFor="" name="filter"> Sort by : </label>
+      <select name="filter">
+          <option value={filter}>name</option>
+          <option value={filter}>target</option>
+        </select>
         <input  
-            name="filter"
-            type="text"   
-            value={filter}
-            onChange={(event) => dispatch(changeFilter(event))}/>
-    </>
+          name="filter"
+          type="text"   
+          value={filter}
+          onChange={(event) => dispatch(changeFilter(event))}/>
+      </>
    );
  };
  
