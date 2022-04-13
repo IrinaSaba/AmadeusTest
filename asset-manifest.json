@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/AmadeusTest/static/css/main.5c0f46bd.css",
+    "main.js": "/AmadeusTest/static/js/main.fdc5b34d.js",
+    "index.html": "/AmadeusTest/index.html",
+    "main.5c0f46bd.css.map": "/AmadeusTest/static/css/main.5c0f46bd.css.map",
+    "main.fdc5b34d.js.map": "/AmadeusTest/static/js/main.fdc5b34d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5c0f46bd.css",
+    "static/js/main.fdc5b34d.js"
+  ]
+}
