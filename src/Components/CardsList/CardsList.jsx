@@ -1,8 +1,14 @@
 import { useDispatch, useSelector } from "react-redux";
 
-const filterContact = (items, filter) => {
-  return items.filter(contact =>
-    contact.name.toLowerCase().includes(filter.toLowerCase())
+const filterCards = (items, filter) => {
+  return items.filter(cards =>
+    cards.name.toLowerCase().includes(filter.toLowerCase())
+  );
+};
+
+const filterCardsTarget = (items, filter) => {
+  return items.filter(cards =>
+    cards.target.toLowerCase().includes(filter.toLowerCase())
   );
 };
 
@@ -10,9 +16,9 @@ const Cards = () => {
   const dispatch = useDispatch();
   const items = useSelector(state => state.cards.items);
   const filter = useSelector(state => state.cards.filter);
-  const newItems = filterContact(items, filter);
-  console.log(items)
-   return  newItems.length ? (
+  const newItems = filterCards(items, filter);
+
+   return newItems.length ? (
     <ul>
        {newItems.map(({ name, id, target, bodyPart, equipment, gifUrl }) => (
             <li key={id}>
@@ -23,9 +29,8 @@ const Cards = () => {
               <img src={gifUrl} alt={name}/>
             </li>
        ))}
-    </ul>
-   ) : null;
- };
- 
+    </ul> ) 
+    : null
+       }
  export default Cards;
  
