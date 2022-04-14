@@ -24,14 +24,16 @@ const Cards = ({option}) => {
     <ul className={s.cards}>
        {newItems.map(({ name, id, target, bodyPart, equipment, gifUrl }) => (
             <li className={s.card} key={id}>
-              <p className={s.cardInfo}> Name: {name}</p>
-              <p className={s.cardInfo}>Target: {target}</p>
-              <p className={s.cardInfo}>Body part: {bodyPart}</p>
-              <p className={s.cardInfo}>Equipment: {equipment}</p>
-              
+              <div className={s.cardInfoSpetial}>
+                <p className={s.cardInfo}> Name: {name}</p>
+                <p className={s.cardInfo}>Target: {target}</p>
+                <p className={s.cardInfo}>Body part: {bodyPart}</p>
+                <p className={s.cardInfo}>Equipment: {equipment}</p>
+              </div>
+              <img src={gifUrl} alt={name} width="250" height="260"></img>
             </li>
        ))}
-    </ul> ) 
+    </ul> )
     : 
     <ul>
     {newItemsTarget.map(({ name, id, target, bodyPart, equipment, gifUrl }) => (
