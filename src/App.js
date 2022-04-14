@@ -1,6 +1,6 @@
 import CardsList from './Components/CardsList/CardsList.jsx'
 import Filter from './Components/Filter/Filter.jsx';
-import './App.scss';
+import s from './App.module.scss';
 import { useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { getCards } from './redux/cards-operations';
@@ -18,12 +18,14 @@ export default function App() {
   }, [dispatch]);
 
   return (
-    <div>
-      <h2>Cards filter</h2>
-      <Filter 
-      option={option}
-      handleChangeOption={handleChangeOption}
-      />
+    <div className={s.mainBody}>
+      <header className={s.headerFilter}>
+        <h1 classname={s.headerFilterTitle}>Cards filter</h1>
+        <Filter 
+        option={option}
+        handleChangeOption={handleChangeOption}
+        />
+      </header>
       <CardsList option={option}/>
     </div>
   );
