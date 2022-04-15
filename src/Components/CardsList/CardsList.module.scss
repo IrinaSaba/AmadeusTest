@@ -20,11 +20,11 @@
       min-height: 435px;
       flex: 0 0 29%;
          .cardInfoSpetial{
-     
-         .cardInfo{
-            margin: 10px;
-            color: #3b4047;
-         }
-      }
+            max-width: 280px; 
+            .cardInfo{
+               margin: 10px;
+               color: #3b4047;
+            }
+         }  
    }
 }
