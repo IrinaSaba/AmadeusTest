@@ -1,4 +1,4 @@
-Small project was done according your requirements:
+Small project was done according requirements:
 - it has one fetch 'GET', I was using library axios with it and async and await.
 - logic of the filters are done by 2 types at the front end by Name or Target.
 - the framework is React and library Redux.
